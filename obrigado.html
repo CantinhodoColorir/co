@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#3B9AE1">
+  <title>Obrigado | Cantinho do Colorir</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --blue: #3B9AE1;
+      --dark-blue: #1F3A5F;
+      --red: #F0484A;
+      --yellow: #FFD43B;
+      --green: #6CC04A;
+      --orange: #FF9F1C;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body { min-height: 100%; margin: 0; }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 16px;
+      color: var(--dark-blue);
+      background: linear-gradient(to bottom, #FFF 0%, #FFF 45%, #EAF5FD 100%);
+      font-family: Arial, sans-serif;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-width: 520px;
+      min-height: calc(100vh - 40px);
+      text-align: center;
+    }
+
+    .logo {
+      width: 160px;
+      height: 160px;
+      margin: 0 auto 8px;
+      object-fit: contain;
+      border-radius: 50%;
+      filter: drop-shadow(0 5px 10px rgba(31, 58, 95, .12));
+    }
+
+    .heart {
+      margin-bottom: 5px;
+      color: var(--red);
+      font-size: 24px;
+      line-height: 1;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: "Fredoka", "Baloo 2", sans-serif;
+      font-size: clamp(3rem, 14vw, 5rem);
+      font-weight: 600;
+      line-height: 1;
+      letter-spacing: -1px;
+    }
+
+    h1 span:nth-child(1), h1 span:nth-child(6) { color: var(--blue); }
+    h1 span:nth-child(2), h1 span:nth-child(7) { color: var(--red); }
+    h1 span:nth-child(3), h1 span:nth-child(8) { color: var(--yellow); }
+    h1 span:nth-child(4), h1 span:nth-child(9) { color: var(--green); }
+    h1 span:nth-child(5) { color: var(--orange); }
+
+    .message {
+      max-width: 430px;
+      margin: 16px auto 0;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .notice {
+      max-width: 400px;
+      margin: 9px auto 0;
+      color: #718096;
+      font-size: .86rem;
+      line-height: 1.4;
+    }
+
+    .whatsapp-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: min(100%, 310px);
+      min-height: 54px;
+      margin-top: 24px;
+      padding: 14px 24px;
+      border-radius: 999px;
+      background: var(--blue);
+      color: #FFF;
+      font-family: "Fredoka", "Baloo 2", sans-serif;
+      font-size: 1.1rem;
+      font-weight: 500;
+      text-decoration: none;
+      box-shadow: 0 8px 18px rgba(59, 154, 225, .24);
+      transition: transform .2s ease, background-color .2s ease, box-shadow .2s ease;
+    }
+
+    .whatsapp-button:hover {
+      background: #2789D0;
+      box-shadow: 0 10px 22px rgba(59, 154, 225, .3);
+      transform: translateY(-2px);
+    }
+
+    .whatsapp-button:focus-visible {
+      outline: 3px solid rgba(59, 154, 225, .35);
+      outline-offset: 4px;
+    }
+
+    footer {
+      margin-top: auto;
+      padding-top: 28px;
+      color: #718096;
+      font-size: .78rem;
+      line-height: 1.4;
+    }
+
+    footer a { color: var(--dark-blue); text-decoration: none; }
+
+    @media (min-width: 600px) {
+      body { padding: 32px 20px; }
+      main { min-height: calc(100vh - 64px); }
+      .logo { width: 200px; height: 200px; margin-bottom: 10px; }
+      .message { font-size: 1.08rem; }
+    }
+
+    @media (max-height: 650px) {
+      body { padding: 12px 16px; }
+      main { min-height: calc(100vh - 24px); }
+      .logo { width: 125px; height: 125px; }
+      .heart { font-size: 20px; }
+      h1 { font-size: 3rem; }
+      .message { margin-top: 10px; }
+      .whatsapp-button { margin-top: 16px; }
+      footer { padding-top: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <img class="logo" src="logo.png" alt="Logo Cantinho do Colorir">
+
+    <div class="heart" aria-hidden="true">♥</div>
+
+    <h1 aria-label="Obrigado!">
+      <span>O</span><span>b</span><span>r</span><span>i</span><span>g</span><span>a</span><span>d</span><span>o</span><span>!</span>
+    </h1>
+
+    <p class="message">
+      Sua compra foi confirmada! Em instantes você recebe o acesso aos seus materiais no e-mail cadastrado.
+    </p>
+
+    <p class="notice">
+      Precisa de ajuda? Fale conosco pelo WhatsApp.
+    </p>
+
+    <a class="whatsapp-button" href="https://web.whatsapp.com/send?phone=5521984336288" target="_blank" rel="noopener noreferrer">
+      Falar no WhatsApp
+    </a>
+  </main>
+</body>
+</html>
